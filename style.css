@@ -1,0 +1,911 @@
+/* globals styling start */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: white;
+}
+
+/* header styling starts*/
+
+header {
+    width: 100%;
+    height: 100%;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 3em;
+    background-color: #512a10;   
+    transition: all 0.4s ;
+    position: fixed;
+    z-index: 999;
+}
+header nav #check {
+    display: none;
+}
+header nav .logo {
+    width: 170px;
+    margin:1em 4em;
+    cursor: pointer;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 4em;
+}
+
+header nav ul li {
+    padding: 25px;
+    font-size: 20px;
+
+    
+}
+
+header nav ul li a {
+    text-decoration: none; 
+    color: #eee;
+    transition: 0.1s;
+}
+header nav ul li:after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000;
+    display: flex;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+header nav ul li:hover:after {
+    width: 100%;
+} 
+header nav ul li:hover a{
+    color: black;
+   
+}
+/* header styling ends*/
+
+/* content styling starts*/
+.content .home {
+    width: 100%;
+    height: 50vh;
+    padding: 4em 4em 2em 4em;
+    background: url(./images/home-bg.jpg);
+    background-position:center;
+    background-position-x:80%;
+    background-size: cover;
+}
+.content .home h4 {
+    color: #eee;
+    font-size: 20px;
+    font-weight: 200;
+    padding-bottom: 1rem;
+}
+.content .home h1 {
+    color: #eee;
+    font-size: 40px;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+.content .home a {
+    text-decoration: none;
+    color: #eee;
+    padding: 10px 30px;
+    border: 0.1rem solid #eee;
+    transition: .3s;
+}
+
+.content .home a:hover {
+    background-color: #512a10;
+}
+
+.content .about h4 {
+    color: #512a10;
+    font-size: 1.5em;
+    font-weight: 200;
+    margin: 10px;
+    padding-top: 80px;
+}
+
+.content .about h1 {
+    color: #000;
+    font-size: 2em;
+    font-weight: 700;
+    margin: 10px;
+}
+.content .about p {
+    color: rgb(83, 83, 83);
+    font-size: medium;
+    margin: 10px;
+    line-height: 1.9;    
+}
+.content .about a {
+    text-decoration: none;
+    color: #000;
+    padding: 10px 35px;
+    margin: 25px 10px;
+    border: 0.1rem solid #512a10;
+    display: inline-block;
+    transition: .3s;
+}
+.content .about a:hover{
+    color: #eee;
+    background-color: #512a10;
+}
+.content .about div {
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0px;
+    margin-bottom: 50px ;
+
+}
+.content .about div h5 {
+    background-color: #eee;
+    width: 32%;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    transition: .3s;
+}
+.content .about div h5:hover {
+    background-color: #512a10;
+    color: #eee;
+    cursor: pointer;
+}
+.content .menu {
+    background-color: #eee;
+    width: 100%;
+
+}
+.content .menu h1 {
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 1.8em;
+}
+.content .menu .menu-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding-right: 0px;
+}
+.content .menu .menu-items .item {
+    width: calc(95% /3);
+    display: grid;
+    justify-content: center;
+    padding: 20px 40px;
+    transition: .3s;
+}
+
+.content .menu .menu-items .item:hover{
+    background-color: white;
+    border-radius: 5px ;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    transform: translateY(-1rem);
+    
+}
+
+.content .menu .menu-items .item img {
+    width: 150px;
+    height: 150px;
+    margin: 5px auto;
+}
+.content .menu .menu-items .item h3 {
+    margin: 14px auto;
+    text-transform: capitalize;
+}
+.content .menu .menu-items .item p {
+    text-align: center;
+    line-height: 2;
+    font-size: smaller;
+    color: gray;
+}
+.content .menu .menu-items .item a {
+    text-decoration: none;
+    color: #512a10;
+    padding: 10px 30px;
+    border: 0.1rem solid #512a10;
+    transition: .3s;
+    margin: 1.3em auto;
+}
+.content .menu .menu-items .item a:hover {
+    background-color: #512a10;
+    color: #eee;
+}
+.content .gallery {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding-bottom: 50px;
+}
+.content .gallery h1 {
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 1.8em;
+}
+.content .gallery .gallery-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    padding-right: 0px;
+}
+
+.content .gallery .gallery-items .card-container {
+    position: relative;
+    display: flex;
+    justify-self: start;
+    width: calc(90% /3);
+    height: 340px;
+    margin: 10px;
+    perspective: 1000px;
+}
+
+.content .gallery .gallery-items .card-container .card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    margin: 10px;
+    border: 5px #512a10;
+    transform-style: preserve-3d;
+    transition: all 1s ease;    
+}
+.content .gallery .gallery-items .card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.content .gallery .gallery-items .card-container .card .front_card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+
+}
+.content .gallery .gallery-items .card-container .card .front_card img {
+    width: 100%;
+    height: 100%;  
+    border-radius: 5px ;
+
+}
+
+
+.content .gallery .gallery-items .card-container .card .back_card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.content .gallery .gallery-items .card-container .card .back_card h3 {
+    text-transform: capitalize;
+    padding: 20px 0;
+}
+
+.content .gallery .gallery-items .card-container .card .back_card p {
+    line-height: 2.5;
+    font-size: smaller;
+    color: gray;
+    padding:  20px 0;
+}
+
+.content .gallery .gallery-items .card-container .card .back_card a {
+    text-decoration: none;
+    color: #512a10;
+    padding: 10px 30px;
+    border: 0.1rem solid #512a10;
+    transition: .3s;
+    margin: 1.3em auto;
+}
+
+.content .gallery .gallery-items .card-container .card .back_card a:hover {
+    background-color: #512a10;
+    color: #eee;
+}
+
+.content .reviews {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    
+}
+
+.content .reviews .customers-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content .reviews h1 {
+    text-transform: capitalize;
+    text-align: center;
+    padding: 1.8em;
+}
+
+.content .reviews .customers-container .customers {
+    width: calc(95% /3);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 40px;
+    margin: 5px;
+    transition: .3s;
+}
+
+.content .reviews .customers-container .customers img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.content .reviews .customers-container .customers h3 {
+    margin: 14px auto;
+    text-transform: capitalize;
+} 
+
+.content .reviews .customers-container .customers p {
+    text-align: center;
+    line-height: 2;
+    font-size: smaller;
+    color: gray;
+}
+
+.content .reviews .customers-container .customers:hover{
+    background-color: white;
+    border-radius: 5px ;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 10%);
+    transform: translateY(-1rem);
+}
+
+.content .contact {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+.content .contact .us {
+    text-transform: capitalize;
+    text-align: center;
+    padding-top: 1.8em;
+}
+
+.content .contact .items {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}
+
+.content .contact .items .item {
+    width: calc(95% /3);
+    height: 15em;
+    border: 1px solid #512a10;
+}
+
+.content .contact .items .item a {
+    width: 5em;
+    color: #000;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: none;
+    padding-top: 20px;
+    margin: auto;
+}
+.content .contact .items .item a:hover {
+    color: #512a10;
+}
+
+.content .contact .items .item h3 {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: x-large;
+    padding: 20px;
+}
+
+.content .contact .items .item p {
+    text-align: center;
+    line-height: 2;
+    font-size: smaller;
+    color: gray;
+}
+
+.content .contact .get {
+    text-transform: capitalize;
+    padding: 10px;
+}
+
+.content .contact form {
+    padding: 10px;
+}
+
+.content .contact form input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    height: 3.5em;
+    border: #512a10 solid 1px;
+    transition: all .3s;
+}
+
+.content .contact form input:focus-visible {
+    background-color: #512a10;
+    border:0.5px #512a10 solid;
+    outline: none;
+}
+
+.content .contact form input:focus::placeholder {
+    color:#eee;
+}
+
+.content .contact form input:nth-child(4) {
+    width: 100%;
+    padding-bottom: 12em;
+    padding-top: 20px;
+}
+
+.content .contact form input::placeholder {
+    font-size: medium;
+    color: rgb(83, 83, 83);
+}
+
+.content .contact form input:last-child {
+    width: 170px;
+    height: 3em;
+    font-size: medium;
+    color: #512a10;
+    background-color: white;
+    padding: 0px 0px;
+    border: 0.1rem solid #512a10;
+    transition: .3s;
+    margin-top: 10px;
+}
+
+.content .contact form input:last-child:hover {
+    color: #eee;
+    background-color: #512a10;
+    cursor: pointer;
+}
+
+/* content styling ends*/
+
+/* footer styling starts*/
+
+footer .newsletter {
+    width: 100%;
+    height: 40vh;
+    margin-top: 2em;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./images/newsletter-bg.jpg) ;
+    background-position: center;
+    background-size: cover;
+}
+
+footer .newsletter h1 {
+    color: #eee;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    padding: 30px 0 10px 0;
+}
+
+footer .newsletter h4 {
+    color: #eee;
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+
+footer form {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 45%;
+    height: 4em;
+    background-color: #eee;
+    margin: auto;
+}
+
+footer form input:first-child {
+    width: 100%;
+    padding-left: 15px;
+    border: 2px solid white;
+}
+
+footer form input:first-child:focus-visible {
+    outline: none;
+}
+
+
+footer form input:first-child::placeholder {
+    color: rgb(83, 83, 83);
+    font-size: medium;   
+}
+
+
+footer form input:last-child {
+    border: 1px solid #512a10;
+    color: #512a10;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    bottom: 1em;
+    margin-right: 10px;
+    width: 100px;
+    height: 3em;
+    transition: all 0.3s;
+}
+
+footer form input:last-child:hover {
+    background-color: #512a10;
+    color: white;
+    cursor: pointer;
+}
+
+footer .rights {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+}
+
+footer .rights h3 {
+    text-align: center;
+    text-transform: capitalize;
+    color: #512a10;
+    font-size: x-large;
+}
+
+footer .rights h6 {
+    color: #000;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: larger;
+    padding: 10px;
+}
+
+footer .rights .fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .rights .fa a {
+    text-decoration: none;
+    padding: 5px;
+    color: #000;
+    font-size: 20px;
+}
+
+footer .top a {
+    text-decoration: none;
+    color: #512a10;
+    right: 0;
+    top: inherit;
+    margin-top: -30px;
+    padding-right: 20px;
+    position: absolute;
+}
+
+/* footer styling ends*/
+
+ @media screen and (min-width:768px) and (max-width:1023px) /* meduim screen */
+{
+    header nav {
+        display: flex;
+        width: 100%;
+    }
+    header nav ul {
+        margin: 0 1em 0 2em;
+    }
+    header nav .logo {
+        width: 160px;
+        margin-left: 2em;
+    }
+    header nav ul li {
+        padding: 11px;
+        font-size: 17px;
+    }
+    .content .home {
+        width: 100%;
+        height: 40vh;
+        padding: 2em 2em 2em 2em;
+    }
+    .content .home h1 {
+        font-size: 30px;
+    }
+    .content .home h4 {
+        padding-top: 25px;
+    }
+    .content .about div {
+        display: grid;
+    }
+    .content .about div h5 {
+        width: 40em;
+        margin-bottom: 10px;
+    }
+    .content .menu .menu-items .item {
+        width: calc(95% /2);
+    }    
+    .content .gallery .gallery-items .card-container {
+        width: calc(90% /2);
+    } 
+    .content .reviews .customers-container .customers {
+        width: calc(95% /2);
+    }
+
+}
+
+@media screen and (max-width:767px)  /* small screen */
+{
+    header {
+        background-color: #eee;
+        display: grid;
+        place-items: center; 
+    }
+    
+    nav{
+        /* text-align: left; */
+        width: 100%;
+        z-index: 999;
+        top: 0; 
+    }
+    
+    nav label .ham-icon {
+        width: 30px;
+        height: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        top: 25%;
+        margin-right: 10px;
+    }
+    
+    nav label .ham-icon span {
+        background: #000;
+        width: 100%;
+        height: 5px;
+        margin-bottom: 1px;
+        border-radius: 3px;
+    }
+    
+    .links{
+        position: absolute;
+        text-align: center;
+        top: 100%;
+        right: 20px;
+        background-color: rgba(128, 128, 128, 0.452);
+        padding: 20px;
+        display: none;
+        width: 100%;
+        transform-origin: right;
+
+    }
+    .links::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -26px;
+        right: 10px;
+        border-style: solid;
+        border-width: 13px;
+        border-color: transparent transparent rgba(128, 128, 128, 0.452) transparent;
+
+    }
+    
+    .links ul {
+        margin: 0;
+        padding: 0;
+        display: block;
+        list-style: none;
+    }
+    
+    .links li {
+        margin-bottom: 5px;
+        text-align: center;
+        margin: 5px -20px;
+        transition: all .4s;
+    }
+    .links li:hover {
+        border: 0px solid #512a10;
+        background-color: #512a10;
+    }
+    .links li:hover a {
+        color: white;
+    }
+    .links li:hover::after {
+        width: 0;
+    }
+    
+    .links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+
+    .checkbtn:checked ~ .links{
+        display: block;
+        width: 28vh;
+        height: 31.5em;
+        transition: all 1s;
+        transform-origin: right;
+    }
+    header nav .logo {
+        width: 115px;
+        margin: 5px;
+    }
+    .content .home {
+        width: 100%;
+        background-position: center;
+        background-position-x: center;
+        height: 40vh;
+        padding: 4em 1em 1em 5px;
+    }
+    .content .home h4 {
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    .content .home h1 {
+        font-size: 25px;
+        padding-bottom: 30px;
+    }
+    .content .home a {
+        padding: 7px 13px;
+        font-size: smaller;
+    }
+    .content .about img {
+        width: 100%;
+    }
+    .content .about  h4 {
+        font-size: large;
+        margin: 10px 5px;
+    }
+    .content .about  h1 {
+        font-size: x-large;
+        margin: 10px 5px;
+    }
+    .content .about p {
+        font-size: smaller;
+        margin: 10px 5px;
+        line-height: 1.6;
+    }
+    .content .about a {
+        padding: 7px 13px;
+        font-size: smaller;
+        margin: 15px 5px;
+    }
+    .content .about div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content .about div h5 {
+        width: 80%;
+        margin-top: 10px;        
+    }
+    .content .menu .menu-items .item {
+        width: 80%;
+    }   
+    .content .menu .menu-items .item a {
+        padding: 10px 20px;
+        margin: 5px auto 10px;
+    }
+    .content .menu .menu-items .item img {
+        width: 120px;
+        height: 120px;
+    }
+    .content .gallery .gallery-items .card-container {
+        width: 80%;
+    } 
+
+    .content .gallery .gallery-items .card-container .card {
+        width: 100%;
+        height: 85%;
+    }
+    .content .gallery .gallery-items .card-container .card .back_card h3 {
+        margin-top: 25px;
+    }
+    .content .gallery .gallery-items .card-container .card .back_card a {
+        padding: 10px 30px;
+        margin: 0px auto 20px;
+    }
+    .content .reviews .customers-container .customers {
+        margin: auto;
+        width: 80%;
+    }
+    .content .reviews .customers-container .customers img {
+        width: 90px;
+        height: 90px;
+    }    
+    .content .reviews .customers-container .customers h3 {
+        font-size: large;
+    }
+    .content .reviews .customers-container .customers p {
+        line-height: 1.6;
+        font-size: small;
+    }
+    .content .contact .items {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 5px;
+        align-items: center;
+    }
+    .content .contact .items .item {
+        width: 80%;
+        margin: 5px;
+    }
+    .content .contact .items .item a {
+        font-size: 35px;        
+    }
+    .content .contact form {
+        padding: 5px;
+    }
+    .content .contact form input:last-child {
+        width: 130px;
+        height: 2.5em;
+    }
+    footer .newsletter {
+        height: 30vh;
+    }
+    footer .newsletter h1 {
+        font-size: 20px;
+        padding: 20px 0 5px 0;
+    }
+    footer .newsletter h4 {
+        font-size: 15px; 
+        padding-bottom: 20px;       
+    }
+    footer form {
+        width: 65%;
+        height: 3em;
+    }
+    footer form input:first-child {
+        padding-left: 10px;
+    }
+    footer form input:last-child {
+        position: absolute;
+        right: -6%;
+        bottom: 20%;
+        margin-right: 10%;
+        width: 70px;
+        height: 30px;
+        transition: all 0.3s;
+    }
+    footer .rights h3 {
+        font-size: large;
+    }
+    footer .rights h1 {
+        font-size: medium;
+    }
+    footer .top a {
+        display: none;
+    }
+
+} 
